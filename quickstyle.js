@@ -27,7 +27,6 @@ function quickstyle(jscolor) {
   };
 
   function buildColorInput(onImmediateChange) {
-    console.log(onImmediateChange);
     var i = document.createElement('input');
     i.type = 'text'
 
