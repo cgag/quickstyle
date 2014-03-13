@@ -1,9 +1,12 @@
-
 function quickstyle(jscolor) {
-  var bgColorInput   = buildColorInput(changeBgColor)
-  var fontColorInput = buildColorInput(changeColor);
-  appendFirst('body', fontColorInput);
-  appendFirst('body', bgColorInput);
+  var quickstyleContainer = document.createElement('div');
+  var bgColorInput   = buildColorInput(changeBgColor, 'font color: ')
+  var fontColorInput = buildColorInput(changeColor, 'bg---color: ');
+
+  quickstyleContainer.appendChild(bgColorInput);
+  quickstyleContainer.appendChild(fontColorInput);
+
+  appendFirst('body', quickstyleContainer);
 
   function appendFirst(selector, el) {
     var container = document.querySelector(selector);
@@ -26,12 +29,19 @@ function quickstyle(jscolor) {
       .color = "#" + this.toString();
   };
 
-  function buildColorInput(onImmediateChange) {
+  function buildColorInput(onImmediateChange, labelText) {
+    var inputContainer = document.createElement('div');
+
     var i = document.createElement('input');
     i.type = 'text'
+    var picker = new jscolor.color(i, {"onImmediateChange": onImmediateChange}); 
 
-      var picker = new jscolor.color(i, {"onImmediateChange": onImmediateChange}); 
+    var label = document.createElement('label')
+    label.appendChild(document.createTextNode(labelText));
+    label.appendChild(i);
 
-    return i;
+    inputContainer.appendChild(label);
+
+    return inputContainer;
   }
 };
