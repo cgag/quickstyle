@@ -1,7 +1,7 @@
 function quickstyle(jscolor) {
   var quickstyleContainer = document.createElement('div');
-  var bgColorInput   = buildColorInput(changeBgColor, 'font color: ')
-  var fontColorInput = buildColorInput(changeColor, 'bg---color: ');
+  var bgColorInput   = buildColorInput(changeBgColor, 'bg---color: ')
+  var fontColorInput = buildColorInput(changeColor, 'font color: ');
 
   quickstyleContainer.appendChild(bgColorInput);
   quickstyleContainer.appendChild(fontColorInput);
