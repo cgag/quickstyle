@@ -4,6 +4,6 @@ Drop `quickstyle.min.js` this script onto your page and start styling your backg
 
 `<script src="quickstyle.min.js"></script>`
 
-Demo here: 
+Demo here: http://curtis.io/quickstyle-demo.html
 
 The color picker is powered by [jscolor](http://jscolor.com/), modified a bit to be distributable as a single script with no image assets.
