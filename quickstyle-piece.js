@@ -1,5 +1,6 @@
 function quickstyle(jscolor) {
   var quickstyleContainer = document.createElement('div');
+  quickstyleContainer.className = 'quickstyle';
 
   var selector = 'body';
   var selectorInput = buildSelectorInput(selector)
